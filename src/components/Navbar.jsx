@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Image from "./Image";
 import { Link } from "react-router";
+import { SignedOut, SignedIn, UserButton } from "@clerk/clerk-react";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -8,7 +9,7 @@ const Navbar = () => {
         <div className="w-full h-16 md:h-20 flex items-center justify-between">
             {/* LOGO */}
             <Link to="/" className="flex items-center gap-4 text-2xl font-bold">
-                <Image src="/logo.png" alt="lama logo" className="w8 h-8"/>
+                <Image src="/logo.png" alt="lama logo" className="w8 h-8" />
                 <span>lamalogs</span>
             </Link>
             {/* MOBILE MENU */}
@@ -19,24 +20,30 @@ const Navbar = () => {
                 </div>
                 {/* MOBILE LINK LIST */}
                 <div className={`w-full h-screen flex flex-col items-center justify-center gap-8 font-medium text-lg absolute top-16 transition-all ease-in-out ${open ? "-right-0" : "-right-[100%]"}`}>
-                    <a href="/">HOME</a>
-                    <a href="/">Trending</a>
-                    <a href="/">Most Popular</a>
-                    <a href="/">About</a>
-                    <a href="">
+                    <Link to="/">HOME</Link>
+                    <Link to="/">Trending</Link>
+                    <Link to="/">Most Popular</Link>
+                    <Link to="/">About</Link>
+                    <Link to="">
                         <button className="py-2 px-4 rounded-3xl bg-blue-800 text-white">Login 👋</button>
-                    </a>
+                    </Link>
                 </div>
             </div>
             {/* DESKTOP MENU */}
             <div className="hidden md:flex items-center gap-8 xl:gap-12 font-medium">
-                <a href="/">HOME</a>
-                <a href="/">Trending</a>
-                <a href="/">Most Popular</a>
-                <a href="/">About</a>
-                <a href="">
-                    <button className="py-2 px-4 rounded-3xl bg-blue-800 text-white">Login 👋</button>
-                </a>
+                <Link to="/">HOME</Link>
+                <Link to="/">Trending</Link>
+                <Link to="/">Most Popular</Link>
+                <Link to="/">About</Link>
+
+                <SignedOut>
+                    <Link to="/login">
+                        <button className="py-2 px-4 rounded-3xl bg-blue-800 text-white">Login 👋</button>
+                    </Link>
+                </SignedOut>
+                <SignedIn>
+                    <UserButton />
+                </SignedIn>
             </div>
         </div>
     )
