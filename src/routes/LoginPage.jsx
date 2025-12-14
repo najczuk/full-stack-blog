@@ -2,8 +2,8 @@ import { SignIn } from "@clerk/clerk-react";
 
 const LoginPage = () => {
     return (
-        <div className="">
-            <SignIn />
+        <div className='flex items-center justify-center h-full'>
+            <SignIn signUpUrl="/register"/>
         </div>
     )
 }
