@@ -1,4 +1,6 @@
-import { Link } from "react-router";
+import { Link } from 'react-router';
+import MainCategories from '../components/MainCategories';
+import FeaturedPosts from '../components/FeaturedPosts';
 
 const HomePage = () => {
   return (
@@ -19,8 +21,7 @@ const HomePage = () => {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </h1>
           <p className="mt-8 text-md md:text-xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
-            sequi magni perferendis adipisci non est repudiandae earum.
+            Mollitia sequi magni perferendis adipisci non est repudiandae earum.
           </p>
         </div>
         {/* animated button */}
@@ -65,8 +66,14 @@ const HomePage = () => {
           </button>
         </Link>
       </div>
+      {/* CATEGORIES */}
+      <MainCategories />
       {/* FEATURED POSTS */}
+      <FeaturedPosts />
       {/* POST LIST */}
+      <div>
+        <h2 className="my-8 text-2xl text-gray-600">Recent Posts</h2>
+      </div>
     </div>
   );
 };
