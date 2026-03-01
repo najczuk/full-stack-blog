@@ -1,6 +1,6 @@
 import { Image as IKImage } from '@imagekit/react';
 
-const Image = ({ src, className, w, h, alt }) => {
+const Image = ({ src, className = '', w = null, h = null, alt = '' }) => {
   return (
     <IKImage
       urlEndpoint={import.meta.env.VITE_IK_URL_ENDPOINT}
@@ -11,6 +11,12 @@ const Image = ({ src, className, w, h, alt }) => {
       lgip={{ active: true, quality: 20 }}
       width={w}
       height={h}
+      transformation={[
+        {
+          width: w,
+          height: h,
+        },
+      ]}
     />
   );
 };
