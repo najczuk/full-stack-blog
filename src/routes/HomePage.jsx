@@ -1,7 +1,8 @@
-import { Link } from 'react-router';
-import MainCategories from '../components/MainCategories';
-import FeaturedPosts from '../components/FeaturedPosts';
-import PostList from '../components/PostList';
+import { Link } from "react-router";
+
+import FeaturedPosts from "../components/FeaturedPosts";
+import MainCategories from "../components/MainCategories";
+import PostList from "../components/PostList";
 
 const HomePage = () => {
   return (

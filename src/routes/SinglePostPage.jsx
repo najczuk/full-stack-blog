@@ -1,8 +1,10 @@
-import { Link } from 'react-router';
-import Image from '@/components/Image';
-import PostMenuActions from '@/components/PostMenuActions';
-import Search from '@/components/Search';
-import Comments from '@/components/Comments';
+import { Link } from "react-router";
+
+import Comments from "@/components/Comments";
+import Image from "@/components/Image";
+import PostMenuActions from "@/components/PostMenuActions";
+import Search from "@/components/Search";
+
 const SinglePostPage = () => {
   return (
     <div className="flex flex-col gap-8">
@@ -126,7 +128,7 @@ const SinglePostPage = () => {
         {/* menu */}
         <div className="px-4 h-max sticky top-8">
           <h1 className="mb-4 text-sm font-medium">Author</h1>
-          <div className='flex flex-col gap-4'>
+          <div className="flex flex-col gap-4">
             <div className="flex items-center gap-8">
               <Image
                 src="userImg.jpeg"
@@ -136,7 +138,7 @@ const SinglePostPage = () => {
               />
               <Link>John Doe</Link>
             </div>
-            <p className='text-sm text-gray-500'>
+            <p className="text-sm text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
             <div className="flex gap-2">

@@ -1,5 +1,6 @@
-import { Link } from 'react-router';
-import Image from './Image';
+import { Link } from "react-router";
+
+import Image from "./Image";
 
 const FeaturedPosts = () => {
   return (

@@ -1,6 +1,6 @@
-import { Image as IKImage } from '@imagekit/react';
+import { Image as IKImage } from "@imagekit/react";
 
-const Image = ({ src, className = '', w = null, h = null, alt = '' }) => {
+const Image = ({ src, className = "", w = null, h = null, alt = "" }) => {
   return (
     <IKImage
       urlEndpoint={import.meta.env.VITE_IK_URL_ENDPOINT}

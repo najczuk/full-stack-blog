@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import Image from './Image';
-import { Link } from 'react-router';
-import { SignedOut, SignedIn, UserButton } from '@clerk/clerk-react';
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
+import { useState } from "react";
+import { Link } from "react-router";
+
+import Image from "./Image";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -19,11 +20,11 @@ const Navbar = () => {
           className="cursor-pointer text-4xl"
           onClick={() => setOpen((prev) => !prev)}
         >
-          {open ? 'X' : '𑁔'}
+          {open ? "X" : "𑁔"}
         </div>
         {/* MOBILE LINK LIST */}
         <div
-          className={`w-full h-screen flex flex-col items-center justify-center gap-8 font-medium text-lg absolute top-16 transition-all ease-in-out ${open ? '-right-0' : '-right-[100%]'}`}
+          className={`w-full h-screen flex flex-col items-center justify-center gap-8 font-medium text-lg absolute top-16 transition-all ease-in-out ${open ? "-right-0" : "-right-[100%]"}`}
         >
           <Link to="/">HOME</Link>
           <Link to="/">Trending</Link>
